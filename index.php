@@ -17,7 +17,7 @@ and open the template in the editor.
         $postalCode = filter_input(INPUT_POST, "postalCode", FILTER_SANITIZE_SPECIAL_CHARS);
         
         
-        if(preg_match('/(^[0-9A-Z]\w*\s?)/', $storeName)){
+        if(preg_match('/^([0-9A-Z]\w*\s?)+$/', $storeName)){
             echo "<p>Store Name acceptable</p>";
         }
         
